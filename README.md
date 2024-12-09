@@ -1,4 +1,4 @@
-🫶🫶🫶
+[![Coverage Status](https://coveralls.io/repos/github/wuannan/ytmp/badge.svg?branch=main)](https://coveralls.io/github/wuannan/ytmp?branch=main)
 
 # Student template
 

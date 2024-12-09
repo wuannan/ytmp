@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "c8 --reporter=lcov mocha"
+    "test": "c8 --reporter=lcov --reporter=html mocha"
   },
   "author": "",
   "license": "MIT",
@@ -15,5 +15,10 @@
   },
   "dependencies": {
     "chai": "^5.1.2"
+  },
+  "c8": {
+    "exclude": [
+      "**/.internal"
+    ]
   }
 }
