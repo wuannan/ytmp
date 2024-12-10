@@ -17,6 +17,9 @@
     "chai": "^5.1.2"
   },
   "c8": {
+    "include": [
+      "src/**/*.js"
+    ],
     "exclude": [
       "**/.internal"
     ]
