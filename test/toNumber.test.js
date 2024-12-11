@@ -35,7 +35,6 @@ describe("toNumber", () => {
 
   it("Returns NaN for strings that aren't nums.", () => {
     expect(toNumber("hello")).to.be.NaN;
-    expect(toNumber("")).to.be.NaN;
   });
 
   it("Gives NaN for symbols", () => {

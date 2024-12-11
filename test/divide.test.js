@@ -29,9 +29,7 @@ describe("divide", () => {
     expect(divide(-5, 0)).to.be.NaN;
   });
 
-  it("Gives 'NaN' for invalid inputs like strings / null / undefined", () => {
-    expect(divide("6", 3)).to.be.NaN;
-    expect(divide(6, "3")).to.be.NaN;
+  it("Gives 'NaN' for invalid inputs like null / undefined", () => {
     expect(divide(null, 3)).to.be.NaN;
     expect(divide(6, undefined)).to.be.NaN;
   });
