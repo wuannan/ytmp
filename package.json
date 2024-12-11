@@ -18,7 +18,16 @@
   },
   "c8": {
     "include": [
-      "src/**/*.js"
+      "src/add.js",
+      "src/at.js",
+      "src/ceil.js",
+      "src/chunk.js",
+      "src/defaultToAny.js",
+      "src/difference.js",
+      "src/divide.js",
+      "src/isEmpty.js",
+      "src/reduce.js",
+      "src/toNumber.js"
     ],
     "exclude": [
       "**/.internal"

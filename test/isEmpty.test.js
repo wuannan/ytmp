@@ -39,11 +39,10 @@ describe("isEmpty", () => {
   it("Returns false for Maps and Sets with stuff in them", () => {
     const map = new Map();
     map.set("key", "value");
+    expect(isEmpty(map)).to.equal(false);
 
     const set = new Set();
     set.add(1);
-
-    expect(isEmpty(map)).to.equal(false);
     expect(isEmpty(set)).to.equal(false);
   });
 
@@ -63,5 +62,17 @@ describe("isEmpty", () => {
     expect(isEmpty(true)).to.equal(true);
     expect(isEmpty(false)).to.equal(true);
     expect(isEmpty(Symbol("symbol"))).to.equal(true);
+  });
+
+  it("Returns true for a prototype object without properties", () => {
+    const obj = {};
+    expect(isEmpty(Object.getPrototypeOf(obj))).to.equal(true);
+  });
+
+  it("Returns false for a prototype object with properties", () => {
+    const proto = {};
+    proto.key = "value";
+    const obj = Object.create(proto);
+    expect(isEmpty(Object.getPrototypeOf(obj))).to.equal(false);
   });
 });
